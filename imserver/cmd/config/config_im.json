@@ -1,0 +1,25 @@
+{
+  "Version": "0.0.1",
+  "Topic" : "im_message_exchange",
+  "Server":{
+    "Name": "im.server.1"
+  },
+  "Port": ":16081",
+  "Etcd": {
+    "Address": [
+      "127.0.0.1:2379"
+    ],
+    "UserName": "",
+    "Password": ""
+  },
+  "Engine": {
+    "Name": "mysql",
+    "DataSource": "root:123456@tcp(127.0.0.1:3306)/gateway?charset=utf8"
+  },
+  "RabbitMq": {
+      "Address": [
+        "amqp://guest:guest@127.0.0.1:5672/"
+      ],
+      "Topic": "im.server.1"
+  }
+}
